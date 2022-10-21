@@ -15,7 +15,7 @@ pub struct Tweet {
     pub id:String,
     pub created_at:DateTime<Utc>,
     pub message:String,
-    pub likes: vec<Like>,
+    pub likes: Vec<Like>,
 
 }
 impl Tweet {

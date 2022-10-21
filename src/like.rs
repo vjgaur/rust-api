@@ -19,7 +19,7 @@ impl Like{
     pub fn new()-> Self{
         Self{
             id:Uuid::new_v4().to_string(),
-            created_at::now(),
+            created_at:Utc::now(),
         }
     }
 }
@@ -43,6 +43,6 @@ pub async fn plus_one(path:Path<(String,)>)-> HttpResponse{
 
 //remove one like from a tweet `/tweets/{id}/likes`
 #[delete("/tweets/{id}/likes")]
-pub asyncfn minus_one(path:Path<(String,)>)->HttpResponse{
+pub async fn minus_one(path:Path<(String,)>)->HttpResponse{
     HttpResponse::NoContent().content_type(APPLICATION_JSON).await.unwrap()
 }
