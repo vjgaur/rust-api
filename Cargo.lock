@@ -1946,7 +1946,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "twitter-clone-rust"
+name = "twitter-rust-api"
 version = "0.1.0"
 dependencies = [
  "actix-rt",

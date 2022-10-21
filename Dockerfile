@@ -22,9 +22,9 @@ WORKDIR /home/app/bin/
 
 COPY --from=cargo-build /usr/src/app/target/x86_64-unknown-linux-musl/release/twitter-clone-rust .
 
-RUN chown app:app twitter-clone-rust
+RUN chown app:app twitter-rust-api
 USER app
 
 EXPOSE 9090
 
-CMD ["./twitter-clone-rust"]
+CMD ["./twitter-rust-api"]
